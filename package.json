@@ -19,7 +19,12 @@
   "scripts": {
     "build": "tsc",
     "test": "jest --coverage",
-    "dev": "nodemon --ext ts --watch ./src --exec \"ts-node src/index.ts\""
+    "snyk": "npm run build && snyk test",
+    "dev": "nodemon --ext ts --watch ./src --exec \"ts-node src/index.ts\"",
+
+    "docker:build": "npm run build && docker build --rm -t ts-template .",
+    "docker:dev": "npm run docker:build && (docker stop ts-template;docker rm ts-template;echo '') && docker run -d --name ts-template --cpus 2 -v ts-template-dev:/app/storage/ ts-template",
+    "docker:test": "npm run docker:build && snyk container test ts-template --file=Dockerfile"
   },
   "engines": {
     "node": ">=16.0.0",
@@ -31,6 +36,7 @@
     "@types/node": "^16.6.1",
     "jest": "^27.0.6",
     "nodemon": "^2.0.12",
+    "snyk": "^1.717.0",
     "ts-node": "^10.2.0",
     "typescript": "^4.3.5"
   }

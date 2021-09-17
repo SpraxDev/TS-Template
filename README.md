@@ -13,7 +13,9 @@ This is a simple template for my projects to have the same starting point on mos
 ## Initial setup
 1. I recommend running `npm update` first (and probably `npm outdated` too)
 2. Edit the initial `package.json` file to your liking
+   * Don't forget to switch the docker container and image names used in the `docker:` scripts
 3. Update the `LICENSE`-file to your liking - You don't have to comply with it, I'm just commonly using that one
+4. You might want to remove the use of `snyk` - It is used as a dev dependency to easily scan for known vulnerabilities
 
 
 ## How to I change the Node.js version used in this template
