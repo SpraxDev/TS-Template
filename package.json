@@ -6,7 +6,11 @@
   "homepage": "https://github.com/SpraxDev/TS-Template#readme",
   "license": "MIT",
   "keywords": [],
-  "author": {},
+  "author": {
+    "name": "Christian Koop",
+    "url": "https://github.com/SpraxDev",
+    "email": "contact@sprax2013.de"
+  },
   "contributors": [],
   "repository": {
     "type": "git",
