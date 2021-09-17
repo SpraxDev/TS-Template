@@ -13,6 +13,7 @@ This is a simple template for my projects to have the same starting point on mos
 ## Initial setup
 1. I recommend running `npm update` first (and probably `npm outdated` too)
 2. Edit the initial `package.json` file to your liking
+3. Update the `LICENSE`-file to your liking - You don't have to comply with it, I'm just commonly using that one
 
 
 ## How to I change the Node.js version used in this template
@@ -23,3 +24,7 @@ the `tsconfig.json` file to point to that version.
 You might need to make additional adjustments to my `tsconfig.json` as I might be overwriting some settings that are
 suboptimal for other version of node. If you are not sure, stick to the configuration provided by `@tsconfig`'s
 configuration.
+
+## License
+This repository contains a `LICENSE`-file, but it is part of the template.
+The template itself is not licensed by me! **If you use this template, just pick the license you prefer**.
