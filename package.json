@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/SpraxDev/TS-Template/issues"
   },
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest --coverage",
