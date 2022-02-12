@@ -24,9 +24,8 @@ This template used `@tsconfig/node{{nodeVersion}}` and makes use of the `engines
 you'd want to change the `@tsconfig` dependency to the version you would want to use (e.g. `14` or `16`) and edit
 the `tsconfig.json` file to point to that version.
 
-You might need to make additional adjustments to my `tsconfig.json` as I might be overwriting some settings that are
-suboptimal for other version of node. If you are not sure, stick to the configuration provided by `@tsconfig`'s
-configuration.
+You might need to make additional adjustments to my `tsconfig.json` (and `tests/tsconfig.json`) as I might be overwriting some settings that are
+suboptimal for other version of node. If you are not sure, stick to the configuration provided by `@tsconfig`.
 
 ## License
 This repository contains a `LICENSE`-file, but it is part of the template.
