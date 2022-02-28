@@ -22,13 +22,16 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
+    
     "test": "jest --coverage",
-    "snyk": "npm run build && snyk test",
     "dev": "nodemon --ext ts --watch ./src --exec \"ts-node src/index.ts\"",
+    
+    "snyk": "npm run build && snyk test",
+    "snyk:docker": "npm run docker:build && snyk container test ts-template:dev --file=Dockerfile",
 
-    "docker:build": "npm run build && docker build --rm -t ts-template .",
-    "docker:dev": "npm run docker:build && (docker stop ts-template;docker rm ts-template;echo '') && docker run -d --name ts-template --cpus 2 -v ts-template-dev:/app/storage/ ts-template",
-    "docker:test": "npm run docker:build && snyk container test ts-template --file=Dockerfile"
+    "docker:build": "npm run build && docker build --rm --tag ts-template:dev .",
+    "docker:dev": "npm run docker:build && (docker stop ts-template;docker rm ts-template;echo '') && docker run --name ts-template --cpus 2 --memory 512M --volume ts-template-dev:/app/storage/ ts-template:dev"
+    
   },
   "engines": {
     "node": ">=16.0.0",
