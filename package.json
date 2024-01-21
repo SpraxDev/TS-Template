@@ -19,12 +19,12 @@
   "bugs": {
     "url": "https://github.com/SpraxDev/TS-Template/issues"
   },
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
 
     "test": "jest --coverage",
-    "dev": "nodemon --ext ts --watch ./src --exec \"ts-node src/index.ts\"",
+    "dev": "nodemon --ext ts --watch ./src --exec \"ts-node src/main.ts\"",
 
     "snyk": "npm run build && snyk test",
     "snyk:docker": "npm run docker:build && snyk container test ts-template:dev --file=Dockerfile",

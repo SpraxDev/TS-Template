@@ -17,5 +17,5 @@ RUN npm i && \
 
 COPY dist/ ./dist/
 
-# CMD ["node", "--enable-source-maps", "dist/index.js"]
-CMD ["node", "dist/index.js"]
+# CMD ["node", "--enable-source-maps", "dist/main.js"]
+CMD ["node", "dist/main.js"]
